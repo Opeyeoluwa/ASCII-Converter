@@ -3,8 +3,16 @@
 
 using namespace std;
 
-void Ascii_to_text(int s){
-    
+void Ascii_to_text(string s, int len){
+    int num = 0;
+    for (int i = 0; i < len; i++) {
+        num = num * 10 + (s[i] - '0');
+        if (num >= 32 && num <= 122) {
+            char ch = (char)num;
+            cout << ch;
+            num = 0;
+        }
+    }
 };
 
 void text_to_Ascii(string s){
@@ -16,7 +24,6 @@ void text_to_Ascii(string s){
 
 int main(){
     int choice;
-    int var;
     string var2;
 
     while(choice!=3){
@@ -28,20 +35,15 @@ int main(){
             getline(cin, var2);
             text_to_Ascii(var2);
         }
-
         else if(choice == 2){
             cout << "Enter the ASCII notation you would like to convert: " << endl;
-            getline(cin, var);
-            Ascii_to_text(var);
+            getline(cin, var2);
+            Ascii_to_text(var2);
         }
-
         else{
             cout << "Invalid Choice, Please choose again" << endl;
         }
     };
-    
-
-
     system("PAUSE");
     return 0;
 }
