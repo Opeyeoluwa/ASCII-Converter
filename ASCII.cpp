@@ -2,11 +2,12 @@
 #include <string>
 using namespace std;
 
+//FUNCTION TO CONVERT ASCII TO TEXT
 void Ascii_to_text(string s, int len){
     int num = 0;
     for (int i = 0; i < len; i++) {
         num = num * 10 + (s[i] - '0');
-        if (num >= 32 && num <= 122) {
+        if (num >= 32 && num <= 122) { // Acounting for special characters, numbers, Upper and lower case letters, ASCII table 32-122
             char ch = (char)num;
             cout << ch;
             num = 0;
@@ -15,6 +16,7 @@ void Ascii_to_text(string s, int len){
     cout << "\n" << endl;
 };
 
+// FUNCTION TO CONVERT TEXT TO ASCII
 void text_to_Ascii(string s){
     for (int i = 0; i < s.length(); i++)
     {
