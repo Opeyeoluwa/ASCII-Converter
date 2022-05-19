@@ -38,9 +38,10 @@ int main(){
         else if(choice == 2){
             cout << "Enter the ASCII notation you would like to convert: " << endl;
             getline(cin, var2);
-            Ascii_to_text(var2);
+            int len = var2.length();
+            Ascii_to_text(var2, len);
         }
-        else{
+        else if(choice!=3){
             cout << "Invalid Choice, Please choose again" << endl;
         }
     };
