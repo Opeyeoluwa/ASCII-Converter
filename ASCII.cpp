@@ -32,13 +32,13 @@ int main(){
         cin >> choice;
 
         if(choice == 1){
-            cout << "Enter the text/sentence you would like to convert: \n";
+            cout << "Enter the text/sentence you would like to convert: " << endl;
             cin.ignore();
             getline(cin, var2);
             text_to_Ascii(var2);
         }
         else if(choice == 2){
-            cout << "Enter the ASCII notation you would like to convert: \n";
+            cout << "Enter the ASCII notation you would like to convert: " << endl;
             cin.ignore();
             getline(cin, var2);
             int len = var2.length();
