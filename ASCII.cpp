@@ -12,7 +12,7 @@ void Ascii_to_text(string s, int len){
             num = 0;
         }
     }
-    cout << endl;
+    cout << "\n" << endl;
 };
 
 void text_to_Ascii(string s){
@@ -20,7 +20,7 @@ void text_to_Ascii(string s){
     {
         cout << (int)s[i];
     }
-    cout << endl;
+    cout << "\n" << endl;
 };
 
 int main(){
@@ -35,14 +35,15 @@ int main(){
             cout << "Enter the text/sentence you would like to convert: " << endl;
             cin.ignore();
             getline(cin, var2);
-            text_to_Ascii(var2);
+
+            cout << "\n Your ASCII notation is "; text_to_Ascii(var2);
         }
         else if(choice == 2){
             cout << "Enter the ASCII notation you would like to convert: " << endl;
             cin.ignore();
             getline(cin, var2);
             int len = var2.length();
-            Ascii_to_text(var2, len);
+            cout << "\n Your Translated text is "; Ascii_to_text(var2, len);
         }
         else if(choice!=3){
             cout << "Invalid Choice, Please choose again" << endl;
