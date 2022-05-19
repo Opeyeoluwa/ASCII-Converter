@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 void Ascii_to_text(string s, int len){
@@ -13,13 +12,15 @@ void Ascii_to_text(string s, int len){
             num = 0;
         }
     }
+    cout << endl;
 };
 
 void text_to_Ascii(string s){
     for (int i = 0; i < s.length(); i++)
     {
-        cout << (int)s[i] << endl;
+        cout << (int)s[i];
     }
+    cout << endl;
 };
 
 int main(){
@@ -31,12 +32,14 @@ int main(){
         cin >> choice;
 
         if(choice == 1){
-            cout << "Enter the text/sentence you would like to convert: " << endl;
+            cout << "Enter the text/sentence you would like to convert: \n";
+            cin.ignore();
             getline(cin, var2);
             text_to_Ascii(var2);
         }
         else if(choice == 2){
-            cout << "Enter the ASCII notation you would like to convert: " << endl;
+            cout << "Enter the ASCII notation you would like to convert: \n";
+            cin.ignore();
             getline(cin, var2);
             int len = var2.length();
             Ascii_to_text(var2, len);
