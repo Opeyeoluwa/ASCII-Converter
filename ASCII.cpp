@@ -6,7 +6,7 @@ using namespace std;
 void Ascii_to_text(string s, int len){
     int num = 0;
     for (int i = 0; i < len; i++) {
-        num = num * 10 + (s[i] - '0');
+        num = num * 10 + (s[i] - '0'); //Subtracting "0" converts a char digit to its integer and adding "0" converts a char digit to its integer equivalent
         if (num >= 32 && num <= 122) { // Acounting for special characters, numbers, Upper and lower case letters, ASCII table 32-122
             char ch = (char)num;
             cout << ch;
