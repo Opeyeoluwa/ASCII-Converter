@@ -6,11 +6,21 @@ using namespace std;
 void Ascii_to_text(string s, int len){
     int num = 0;
     for (int i = 0; i < len; i++) {
-        num = num * 10 + (s[i] - '0'); //Subtracting "0" converts a char digit to its integer and adding "0" converts a char digit to its integer equivalent
-        if (num >= 32 && num <= 122) { // Acounting for special characters, numbers, Upper and lower case letters, ASCII table 32-122
+
+        // Using concatenation to find the ascii equivalent of input
+        //Subtracting "0" converts a char digit to its integer and adding "0" converts a char digit to its integer equivalent
+        
+        num = num * 10 + (s[i] - '0'); 
+        
+        // Acounting for special characters, numbers, Upper and lower case letters, ASCII table 32-122
+        if (num >= 32 && num <= 122) { 
             char ch = (char)num;
-            cout << ch;
-            num = 0;
+
+            //converting the digit to its character
+            cout << ch;  
+            
+            //reset num to zero
+            num = 0;    
         }
     }
     cout << "\n" << endl;
